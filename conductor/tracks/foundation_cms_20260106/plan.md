@@ -1,7 +1,7 @@
 # Track Plan: Foundation & Core CMS
 
 ## Phase 1: Project Initialization & Auth
-- [~] Task: Inisialisasi Proyek Laravel & Install Dependencies (Tailwind, Livewire, Flux UI)
+- [x] Task: Inisialisasi Proyek Laravel & Install Dependencies (Tailwind, Livewire, Flux UI) [fb8a463]
 - [ ] Task: Setup Laravel Jetstream & Fortify
 - [ ] Task: Konfigurasi Spatie Permission & Spatie Medialibrary
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Project Initialization & Auth' (Protocol in workflow.md)
