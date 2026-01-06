@@ -1,47 +1,3 @@
-<?php
-
-use App\Models\News;
-use Livewire\Volt\Component;
-use Livewire\WithFileUploads;
-use Illuminate\Support\Str;
-
-new class extends Component {
-    use WithFileUploads;
-
-    public array $form = [
-        'title' => '',
-        'content' => '',
-        'is_published' => false,
-        'image' => null,
-    ];
-
-    public function save()
-    {
-        $this->validate([
-            'form.title' => 'required|min:3',
-            'form.content' => 'required',
-            'form.is_published' => 'boolean',
-            'form.image' => 'nullable|image|max:2048',
-        ]);
-
-        $news = News::create([
-            'title' => $this->form['title'],
-            'slug' => Str::slug($this->form['title']) . '-' . Str::random(5),
-            'content' => $this->form['content'],
-            'is_published' => $this->form['is_published'],
-            'published_at' => $this->form['is_published'] ? now() : null,
-        ]);
-
-        if ($this->form['image']) {
-            $news->addMedia($this->form['image'])->toMediaCollection('images');
-        }
-
-        $this->js("Flux.toast('Berita berhasil dibuat.')");
-
-        return redirect()->route('admin.news.index');
-    }
-}; ?>
-
 <div class="p-6 max-w-4xl mx-auto">
     <div class="flex items-center justify-between mb-6">
         <flux:heading size="xl">Buat Berita Baru</flux:heading>
@@ -62,4 +18,3 @@ new class extends Component {
         </div>
     </form>
 </div>
-

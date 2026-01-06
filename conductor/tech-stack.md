@@ -11,7 +11,7 @@
 *   **UI Library:** **Flux UI** - Digunakan sebagai komponen UI utama untuk Landing Page dan Dashboard Admin.
 
 ## Authentication & Security
-*   **Auth Scaffolding:** Laravel Jetstream (menggunakan Fortify) - Menyediakan autentikasi yang aman termasuk fitur manajemen sesi dan profil.
+*   **Auth Scaffolding:** Laravel Livewire Starter Kit (Fortify & Volt) - Menyediakan autentikasi yang aman termasuk fitur manajemen sesi dan profil menggunakan Single File Components (Volt).
 *   **Authorization:** Spatie Laravel-Permission - Untuk manajemen Role (misal: Super Admin, Redaktur Berita) dan Permissions.
 
 ## Media & Content Management

@@ -1,26 +1,3 @@
-<?php
-
-use App\Models\Document;
-use Livewire\Volt\Component;
-use Livewire\WithPagination;
-
-new class extends Component {
-    use WithPagination;
-
-    public function delete(Document $document)
-    {
-        $document->delete();
-        $this->js("Flux.toast('Dokumen berhasil dihapus.')");
-    }
-
-    public function with(): array
-    {
-        return [
-            'documents' => Document::latest()->paginate(10),
-        ];
-    }
-}; ?>
-
 <div class="p-6">
     <div class="flex justify-between items-center mb-6">
         <flux:heading size="xl">Manajemen Dokumen</flux:heading>

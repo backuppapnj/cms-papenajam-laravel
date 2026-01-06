@@ -1,26 +1,3 @@
-<?php
-
-use App\Models\Gallery;
-use Livewire\Volt\Component;
-use Livewire\WithPagination;
-
-new class extends Component {
-    use WithPagination;
-
-    public function delete(Gallery $gallery)
-    {
-        $gallery->delete();
-        $this->js("Flux.toast('Item galeri berhasil dihapus.')");
-    }
-
-    public function with(): array
-    {
-        return [
-            'galleries' => Gallery::latest()->paginate(12),
-        ];
-    }
-}; ?>
-
 <div class="p-6">
     <div class="flex justify-between items-center mb-6">
         <flux:heading size="xl">Manajemen Galeri</flux:heading>

@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-## [~] Track: Membangun fondasi sistem, autentikasi admin, serta modul CMS inti untuk Berita, Galeri, dan Manajemen Dokumen.
-*Link: [./conductor/tracks/foundation_cms_20260106/](./conductor/tracks/foundation_cms_20260106/)*
+## [~] Track: Refactor to Class-Based Livewire (MVC)
+*Link: [./conductor/tracks/refactor_mvc_20260106/](./conductor/tracks/refactor_mvc_20260106/)*

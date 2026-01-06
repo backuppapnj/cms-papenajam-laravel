@@ -1,55 +1,3 @@
-<?php
-
-use App\Models\News;
-use Livewire\Volt\Component;
-use Livewire\WithFileUploads;
-use Illuminate\Support\Str;
-
-new class extends Component {
-    use WithFileUploads;
-
-    public News $news;
-    public array $form = [];
-
-    public function mount(News $news)
-    {
-        $this->news = $news;
-        $this->form = [
-            'title' => $news->title,
-            'content' => $news->content,
-            'is_published' => (bool) $news->is_published,
-            'image' => null,
-        ];
-    }
-
-    public function save()
-    {
-        $this->validate([
-            'form.title' => 'required|min:3',
-            'form.content' => 'required',
-            'form.is_published' => 'boolean',
-            'form.image' => 'nullable|image|max:2048',
-        ]);
-
-        $this->news->update([
-            'title' => $this->form['title'],
-            // Slug usually doesn't change on edit to preserve SEO links, but can be optional
-            'content' => $this->form['content'],
-            'is_published' => $this->form['is_published'],
-            'published_at' => ($this->form['is_published'] && !$this->news->published_at) ? now() : $this->news->published_at,
-        ]);
-
-        if ($this->form['image']) {
-            $this->news->clearMediaCollection('images');
-            $this->news->addMedia($this->form['image'])->toMediaCollection('images');
-        }
-
-        $this->js("Flux.toast('Berita berhasil diperbarui.')");
-
-        return redirect()->route('admin.news.index');
-    }
-}; ?>
-
 <div class="p-6 max-w-4xl mx-auto">
     <div class="flex items-center justify-between mb-6">
         <flux:heading size="xl">Edit Berita</flux:heading>
@@ -76,4 +24,3 @@ new class extends Component {
         </div>
     </form>
 </div>
-

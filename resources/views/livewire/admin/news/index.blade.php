@@ -1,26 +1,3 @@
-<?php
-
-use App\Models\News;
-use Livewire\Volt\Component;
-use Livewire\WithPagination;
-
-new class extends Component {
-    use WithPagination;
-
-    public function delete(News $news)
-    {
-        $news->delete();
-        $this->js("Flux.toast('Berita berhasil dihapus.')");
-    }
-
-    public function with(): array
-    {
-        return [
-            'news' => News::latest()->paginate(10),
-        ];
-    }
-}; ?>
-
 <div class="p-6">
     <div class="flex justify-between items-center mb-6">
         <flux:heading size="xl">Manajemen Berita</flux:heading>
@@ -64,4 +41,3 @@ new class extends Component {
         {{ $news->links() }}
     </div>
 </div>
-
