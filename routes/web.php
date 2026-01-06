@@ -35,5 +35,11 @@ Route::middleware(['auth'])->group(function () {
         Volt::route('news', 'admin.news.index')->name('news.index');
         Volt::route('news/create', 'admin.news.create')->name('news.create');
         Volt::route('news/{news}/edit', 'admin.news.edit')->name('news.edit');
+
+        Volt::route('gallery', 'admin.gallery.index')->name('gallery.index');
+        Volt::route('gallery/create', 'admin.gallery.create')->name('gallery.create');
+
+        Volt::route('documents', 'admin.documents.index')->name('documents.index');
+        Volt::route('documents/create', 'admin.documents.create')->name('documents.create');
     });
 });

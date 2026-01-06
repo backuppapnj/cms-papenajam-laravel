@@ -13,8 +13,8 @@
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: News Management' (Protocol in workflow.md)
 
 ## Phase 3: Gallery & Document Management
-- [ ] Task: Galeri - Write Tests
-- [ ] Task: Galeri - Implementasi CRUD Galeri (Foto/Video)
-- [ ] Task: Dokumen - Write Tests
-- [ ] Task: Dokumen - Implementasi CRUD Dokumen (File Upload)
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: Gallery & Document Management' (Protocol in workflow.md)
+- [x] Task: Galeri - Write Tests
+- [x] Task: Galeri - Implementasi CRUD Galeri (Foto/Video)
+- [x] Task: Dokumen - Write Tests
+- [x] Task: Dokumen - Implementasi CRUD Dokumen (File Upload)
+- [x] Task: Conductor - User Manual Verification 'Phase 3: Gallery & Document Management' (Protocol in workflow.md)
