@@ -2,14 +2,14 @@
 
 ## Phase 1: Project Initialization & Auth
 - [x] Task: Inisialisasi Proyek Laravel & Install Dependencies (Tailwind, Livewire, Flux UI) [fb8a463]
-- [ ] Task: Setup Laravel Jetstream & Fortify
-- [ ] Task: Konfigurasi Spatie Permission & Spatie Medialibrary
+- [x] Task: Setup Laravel Jetstream & Fortify
+- [x] Task: Konfigurasi Spatie Permission & Spatie Medialibrary
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Project Initialization & Auth' (Protocol in workflow.md)
 
 ## Phase 2: News Management (CMS Berita)
-- [ ] Task: Berita - Write Tests (CRUD & Media Association)
-- [ ] Task: Berita - Implementasi Migration & Model
-- [ ] Task: Berita - Implementasi Livewire Components (Admin CRUD) menggunakan Flux UI
+- [x] Task: Berita - Write Tests (CRUD & Media Association)
+- [x] Task: Berita - Implementasi Migration & Model
+- [x] Task: Berita - Implementasi Livewire Components (Admin CRUD) menggunakan Flux UI
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: News Management' (Protocol in workflow.md)
 
 ## Phase 3: Gallery & Document Management

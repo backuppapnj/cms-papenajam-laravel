@@ -29,4 +29,11 @@ Route::middleware(['auth'])->group(function () {
             ),
         )
         ->name('two-factor.show');
+
+    // Admin Routes
+    Route::prefix('admin')->name('admin.')->group(function () {
+        Volt::route('news', 'admin.news.index')->name('news.index');
+        Volt::route('news/create', 'admin.news.create')->name('news.create');
+        Volt::route('news/{news}/edit', 'admin.news.edit')->name('news.edit');
+    });
 });
