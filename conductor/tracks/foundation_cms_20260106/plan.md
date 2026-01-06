@@ -12,7 +12,7 @@
 - [x] Task: Berita - Implementasi Livewire Components (Admin CRUD) menggunakan Flux UI
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: News Management' (Protocol in workflow.md)
 
-## Phase 3: Gallery & Document Management
+## Phase 3: Gallery & Document Management [checkpoint: 109e79c]
 - [x] Task: Galeri - Write Tests
 - [x] Task: Galeri - Implementasi CRUD Galeri (Foto/Video)
 - [x] Task: Dokumen - Write Tests
