@@ -6,17 +6,19 @@ use App\Livewire\Admin\Gallery\Create as GalleryCreate;
 use App\Livewire\Admin\Gallery\Index as GalleryIndex;
 use App\Livewire\Admin\News\Create as NewsCreate;
 use App\Livewire\Admin\News\Edit as NewsEdit;
-use App\Livewire\Admin\Profile\ProfileForm;
-use App\Livewire\Admin\Officers\Index as OfficerIndex;
+use App\Livewire\Admin\News\Index as NewsIndex;
 use App\Livewire\Admin\Officers\Create as OfficerCreate;
 use App\Livewire\Admin\Officers\Edit as OfficerEdit;
-use App\Livewire\Admin\Gallery\Index as GalleryIndex;
-use App\Livewire\Admin\News\Index as NewsIndex;
+use App\Livewire\Admin\Officers\Index as OfficerIndex;
+use App\Livewire\Admin\Profile\ProfileForm;
 use App\Livewire\Public\Documents\Index as PublicDocumentsIndex;
 use App\Livewire\Public\Gallery\Index as PublicGalleryIndex;
 use App\Livewire\Public\Home;
 use App\Livewire\Public\News\Index as PublicNewsIndex;
 use App\Livewire\Public\News\Show as PublicNewsShow;
+use App\Livewire\Public\Profile\Sejarah as PublicSejarah;
+use App\Livewire\Public\Profile\Structure as PublicStructure;
+use App\Livewire\Public\Profile\VisiMisi as PublicVisiMisi;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -32,6 +34,12 @@ Route::name('public.')->group(function () {
     Route::get('/news/{slug}', PublicNewsShow::class)->name('news.show');
     Route::get('/gallery', PublicGalleryIndex::class)->name('gallery');
     Route::get('/documents', PublicDocumentsIndex::class)->name('documents');
+
+    Route::prefix('profile')->name('profile.')->group(function () {
+        Route::get('/visi-misi', PublicVisiMisi::class)->name('visi-misi');
+        Route::get('/sejarah', PublicSejarah::class)->name('sejarah');
+        Route::get('/struktur-organisasi', PublicStructure::class)->name('structure');
+    });
 });
 
 Route::view('dashboard', 'dashboard')
