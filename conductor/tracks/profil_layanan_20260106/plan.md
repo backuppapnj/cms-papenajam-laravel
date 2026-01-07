@@ -4,7 +4,7 @@
 - [x] Task: Profile - Create Migrations & Models (ProfileContent, Officer) [381356c]
 - [x] Task: Profile - Write Tests for Management Features
 - [x] Task: Profile - Implement Admin Form for Visi Misi & Sejarah [305461c]
-- [~] Task: Profile - Implement Admin CRUD for Officers (Struktur Organisasi)
+- [x] Task: Profile - Implement Admin CRUD for Officers (Struktur Organisasi) [43564a4]
 - [ ] Task: Profile - Implement Public Views for Visi Misi, Sejarah, and Officers
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Institutional Profile' (Protocol in workflow.md)
 
