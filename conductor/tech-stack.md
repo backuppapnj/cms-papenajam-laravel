@@ -18,6 +18,10 @@
 *   **Media Handling:** Spatie Laravel-Medialibrary - Untuk pengelolaan upload gambar berita, slider, dan dokumen publik secara terorganisir.
 *   **Icons:** Heroicons (terintegrasi dengan Flux UI).
 
+## Testing & Environment
+*   **Testing Framework:** Pest / PHPUnit.
+*   **Environment Isolation:** Menggunakan `.env.testing` dan database MySQL terpisah (`db_cms_pa_penajam_test`) untuk memastikan data utama tidak termodifikasi saat pengujian otomatis.
+
 ## Deployment & Infrastructure
 *   **Environment:** Shared Hosting (cPanel).
 *   **Optimization:** Memastikan build asset (Vite) kompatibel dengan struktur direktori shared hosting (misal: penyesuaian folder `public`).

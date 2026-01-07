@@ -18,11 +18,16 @@ Menjadi pusat informasi digital yang kredibel dan transparan bagi masyarakat pen
 
 ## Fitur Utama (MVP)
 1. **Manajemen Konten (CMS):**
-   - Dashboard admin menggunakan Flux UI.
-   - CRUD Berita, Pengumuman, dan Artikel.
-   - Manajemen Galeri Foto and Video.
-   - Manajemen Menu Dinamis dan Slider Landing Page.
-2. **Profil & Layanan:**
+   - Dashboard admin menggunakan Flux UI. (Selesai)
+   - CRUD Berita, Pengumuman, dan Artikel. (Selesai)
+   - Manajemen Galeri Foto and Video. (Selesai)
+   - Manajemen Dokumen (Pusat Unduhan). (Selesai)
+2. **Antarmuka Publik (Front-end):**
+   - Landing Page responsif (Hero, Sambutan, Quick Links, Berita Terkini). (Selesai)
+   - Halaman Arsip dan Detail Berita dengan fitur Search/Filter. (Selesai)
+   - Galeri Foto/Video Publik dengan Lightbox. (Selesai)
+   - Pusat Unduhan Dokumen Publik. (Selesai)
+3. **Profil & Layanan:**
    - Halaman Visi Misi, Sejarah, dan Struktur Organisasi.
    - Informasi Prosedur Berperkara dan Biaya Panjar (Radius).
 3. **Keterbukaan Informasi:**
