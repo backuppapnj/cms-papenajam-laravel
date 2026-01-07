@@ -1,11 +1,11 @@
 # Track Plan: Implementasi Halaman Publik (Public Facing Pages)
 
-## Phase 1: Setup & Landing Page
+## Phase 1: Setup & Landing Page [checkpoint: d2fd203]
 - [x] Task: Public - Setup Layout & Header/Footer Components
 - [x] Task: Public - Write Tests for Landing Page Elements
 - [x] Task: Public - Implement Landing Page (Hero, Sambutan, Quick Links, Widget Sholat)
-- [~] Task: Public - Implement Latest News Section on Landing Page
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Setup & Landing Page' (Protocol in workflow.md)
+- [x] Task: Public - Implement Latest News Section on Landing Page
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Setup & Landing Page' (Protocol in workflow.md)
 
 ## Phase 2: News & Archive Pages
 - [ ] Task: Public News - Write Tests for Archive & Detail Views
