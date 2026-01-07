@@ -9,8 +9,8 @@
             <h1 class="text-4xl md:text-6xl font-bold mb-6">Selamat Datang di Pengadilan Agama Penajam</h1>
             <p class="text-xl md:text-2xl text-zinc-200 mb-8 max-w-2xl mx-auto">Mewujudkan Peradilan yang Agung, Modern, dan Melayani Sepenuh Hati.</p>
             <div class="flex justify-center gap-4">
-                <flux:button variant="primary">Jadwal Sidang</flux:button>
-                <flux:button variant="filled">Layanan Perkara</flux:button>
+                <flux:button variant="primary" href="#">Jadwal Sidang</flux:button>
+                <flux:button variant="filled" href="{{ route('public.services.radius-fees') }}">Layanan Perkara</flux:button>
             </div>
         </div>
     </section>
@@ -51,14 +51,33 @@
         <div class="container mx-auto px-4">
             <flux:heading size="lg" class="text-center mb-8">Akses Cepat Layanan</flux:heading>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                @foreach(['SIPP' => 'server', 'e-Court' => 'computer-desktop', 'Jadwal Sidang' => 'calendar', 'Biaya Perkara' => 'calculator'] as $label => $icon)
-                    <flux:card class="flex flex-col items-center justify-center p-6 hover:bg-green-50 dark:hover:bg-green-900/20 transition cursor-pointer text-center space-y-3 group">
-                        <div class="p-4 bg-green-100 dark:bg-green-900/50 rounded-full group-hover:scale-110 transition duration-300">
-                            <flux:icon :name="$icon" class="w-8 h-8 text-green-700 dark:text-green-400" />
-                        </div>
-                        <span class="font-medium text-zinc-800 dark:text-zinc-200">{{ $label }}</span>
-                    </flux:card>
-                @endforeach
+                <flux:card href="https://sipp.pa-penajam.go.id" target="_blank" class="flex flex-col items-center justify-center p-6 hover:bg-green-50 dark:hover:bg-green-900/20 transition cursor-pointer text-center space-y-3 group">
+                    <div class="p-4 bg-green-100 dark:bg-green-900/50 rounded-full group-hover:scale-110 transition duration-300">
+                        <flux:icon name="server" class="w-8 h-8 text-green-700 dark:text-green-400" />
+                    </div>
+                    <span class="font-medium text-zinc-800 dark:text-zinc-200">SIPP</span>
+                </flux:card>
+
+                <flux:card href="https://ecourt.mahkamahagung.go.id" target="_blank" class="flex flex-col items-center justify-center p-6 hover:bg-green-50 dark:hover:bg-green-900/20 transition cursor-pointer text-center space-y-3 group">
+                    <div class="p-4 bg-green-100 dark:bg-green-900/50 rounded-full group-hover:scale-110 transition duration-300">
+                        <flux:icon name="computer-desktop" class="w-8 h-8 text-green-700 dark:text-green-400" />
+                    </div>
+                    <span class="font-medium text-zinc-800 dark:text-zinc-200">e-Court</span>
+                </flux:card>
+
+                <flux:card href="#" class="flex flex-col items-center justify-center p-6 hover:bg-green-50 dark:hover:bg-green-900/20 transition cursor-pointer text-center space-y-3 group">
+                    <div class="p-4 bg-green-100 dark:bg-green-900/50 rounded-full group-hover:scale-110 transition duration-300">
+                        <flux:icon name="calendar" class="w-8 h-8 text-green-700 dark:text-green-400" />
+                    </div>
+                    <span class="font-medium text-zinc-800 dark:text-zinc-200">Jadwal Sidang</span>
+                </flux:card>
+
+                <flux:card href="{{ route('public.services.radius-fees') }}" class="flex flex-col items-center justify-center p-6 hover:bg-green-50 dark:hover:bg-green-900/20 transition cursor-pointer text-center space-y-3 group">
+                    <div class="p-4 bg-green-100 dark:bg-green-900/50 rounded-full group-hover:scale-110 transition duration-300">
+                        <flux:icon name="calculator" class="w-8 h-8 text-green-700 dark:text-green-400" />
+                    </div>
+                    <span class="font-medium text-zinc-800 dark:text-zinc-200">Biaya Perkara</span>
+                </flux:card>
             </div>
         </div>
     </section>
@@ -96,13 +115,13 @@
                     <flux:heading size="xl">Berita Terbaru</flux:heading>
                     <flux:subheading>Informasi terkini seputar Pengadilan Agama Penajam</flux:subheading>
                 </div>
-                <flux:button variant="subtle" href="#">Lihat Semua Berita</flux:button>
+                <flux:button variant="subtle" href="{{ route('public.news.index') }}">Lihat Semua Berita</flux:button>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 @foreach($latestNews as $news)
-                    <flux:card class="overflow-hidden !p-0 group flex flex-col h-full">
-                        <div class="aspect-video relative overflow-hidden">
+                    <flux:card class="overflow-hidden !p-0 group flex flex-col h-full shadow-sm hover:shadow-md transition duration-300">
+                        <a href="{{ route('public.news.show', $news->slug) }}" class="aspect-video relative overflow-hidden block">
                             @if($news->getFirstMediaUrl('images'))
                                 <img src="{{ $news->getFirstMediaUrl('images') }}" alt="{{ $news->title }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             @else
@@ -113,14 +132,16 @@
                             <div class="absolute top-4 left-4">
                                 <flux:badge color="green">Berita</flux:badge>
                             </div>
-                        </div>
+                        </a>
                         <div class="p-6 flex flex-col flex-grow">
                             <div class="text-xs text-zinc-500 mb-2">{{ $news->published_at?->format('d M Y') }}</div>
-                            <h3 class="text-lg font-bold mb-3 line-clamp-2 group-hover:text-green-700 dark:group-hover:text-green-400 transition cursor-pointer">{{ $news->title }}</h3>
+                            <a href="{{ route('public.news.show', $news->slug) }}" class="block">
+                                <h3 class="text-lg font-bold mb-3 line-clamp-2 group-hover:text-green-700 dark:group-hover:text-green-400 transition">{{ $news->title }}</h3>
+                            </a>
                             <p class="text-zinc-600 dark:text-zinc-400 text-sm line-clamp-3 mb-4 flex-grow">
                                 {{ Str::limit(strip_tags($news->content), 120) }}
                             </p>
-                            <flux:button variant="ghost" size="sm" class="self-start !p-0 hover:!bg-transparent text-green-700 dark:text-green-400 font-semibold group-hover:translate-x-1 transition duration-300">Baca Selengkapnya &rarr;</flux:button>
+                            <flux:button href="{{ route('public.news.show', $news->slug) }}" variant="ghost" size="sm" class="self-start !p-0 hover:!bg-transparent text-green-700 dark:text-green-400 font-semibold group-hover:translate-x-1 transition duration-300">Baca Selengkapnya &rarr;</flux:button>
                         </div>
                     </flux:card>
                 @endforeach

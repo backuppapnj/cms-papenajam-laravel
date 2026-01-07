@@ -10,13 +10,30 @@
             </div>
 
             <!-- Navigation (Desktop) -->
-            <nav class="hidden md:flex space-x-8">
+            <nav class="hidden md:flex space-x-4">
                 <flux:navbar.item href="/" :active="request()->is('/')">Beranda</flux:navbar.item>
-                <flux:navbar.item href="#">Profil</flux:navbar.item>
-                <flux:navbar.item href="#">Berita</flux:navbar.item>
-                <flux:navbar.item href="#">Layanan</flux:navbar.item>
-                <flux:navbar.item href="#">Galeri</flux:navbar.item>
-                <flux:navbar.item href="#">Kontak</flux:navbar.item>
+                
+                <flux:dropdown>
+                    <flux:navbar.item icon-trailing="chevron-down">Profil</flux:navbar.item>
+                    <flux:menu>
+                        <flux:menu.item href="{{ route('public.profile.visi-misi') }}">Visi & Misi</flux:menu.item>
+                        <flux:menu.item href="{{ route('public.profile.sejarah') }}">Sejarah</flux:menu.item>
+                        <flux:menu.item href="{{ route('public.profile.structure') }}">Struktur Organisasi</flux:menu.item>
+                    </flux:menu>
+                </flux:dropdown>
+
+                <flux:navbar.item href="{{ route('public.news.index') }}" :active="request()->is('news*')">Berita</flux:navbar.item>
+                
+                <flux:dropdown>
+                    <flux:navbar.item icon-trailing="chevron-down">Layanan</flux:navbar.item>
+                    <flux:menu>
+                        <flux:menu.item href="{{ route('public.services.radius-fees') }}">Biaya Panjar (Radius)</flux:menu.item>
+                        <flux:menu.item href="#">Prosedur Berperkara</flux:menu.item>
+                    </flux:menu>
+                </flux:dropdown>
+
+                <flux:navbar.item href="{{ route('public.gallery') }}" :active="request()->is('gallery*')">Galeri</flux:navbar.item>
+                <flux:navbar.item href="{{ route('public.documents') }}" :active="request()->is('documents*')">Pusat Unduhan</flux:navbar.item>
             </nav>
 
             <!-- Mobile Menu Button -->

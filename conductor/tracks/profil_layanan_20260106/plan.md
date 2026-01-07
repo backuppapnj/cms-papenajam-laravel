@@ -17,5 +17,5 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 2: Legal Services' (Protocol in workflow.md)
 
 ## Phase 3: Final Integration & Navigation
-- [ ] Task: Integration - Add Links to Header/Footer and Landing Page
-- [ ] Task: Conductor - Final Full Suite Test Verification
+- [x] Task: Integration - Add Links to Header/Footer and Landing Page
+- [x] Task: Conductor - Final Full Suite Test Verification
