@@ -14,7 +14,7 @@
 - [x] Task: Public News - Implement News Detail Page (Share, Print, Navigation)
 - [x] Task: Conductor - User Manual Verification 'Phase 2: News & Archive Pages' (Protocol in workflow.md)
 
-## Phase 3: Gallery & Document Center
+## Phase 3: Gallery & Document Center [checkpoint: c001ec6]
 - [x] Task: Public Gallery - Write Tests for Gallery Features
 - [x] Task: Public Gallery - Implement Gallery Grid & Lightbox (Foto/Video)
 - [x] Task: Public Docs - Write Tests for Document Center
