@@ -15,8 +15,8 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 2: News & Archive Pages' (Protocol in workflow.md)
 
 ## Phase 3: Gallery & Document Center
-- [ ] Task: Public Gallery - Write Tests for Gallery Features
-- [ ] Task: Public Gallery - Implement Gallery Grid & Lightbox (Foto/Video)
-- [ ] Task: Public Docs - Write Tests for Document Center
-- [ ] Task: Public Docs - Implement Document Table, Download, & Search
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: Gallery & Document Center' (Protocol in workflow.md)
+- [x] Task: Public Gallery - Write Tests for Gallery Features
+- [x] Task: Public Gallery - Implement Gallery Grid & Lightbox (Foto/Video)
+- [x] Task: Public Docs - Write Tests for Document Center
+- [x] Task: Public Docs - Implement Document Table, Download, & Search
+- [x] Task: Conductor - User Manual Verification 'Phase 3: Gallery & Document Center' (Protocol in workflow.md)
