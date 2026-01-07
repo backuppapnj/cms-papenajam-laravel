@@ -2,8 +2,8 @@
 
 ## Phase 1: Institutional Profile (Visi, Sejarah, Struktur)
 - [x] Task: Profile - Create Migrations & Models (ProfileContent, Officer) [381356c]
-- [ ] Task: Profile - Write Tests for Management Features
-- [ ] Task: Profile - Implement Admin Form for Visi Misi & Sejarah
+- [x] Task: Profile - Write Tests for Management Features
+- [~] Task: Profile - Implement Admin Form for Visi Misi & Sejarah
 - [ ] Task: Profile - Implement Admin CRUD for Officers (Struktur Organisasi)
 - [ ] Task: Profile - Implement Public Views for Visi Misi, Sejarah, and Officers
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Institutional Profile' (Protocol in workflow.md)
