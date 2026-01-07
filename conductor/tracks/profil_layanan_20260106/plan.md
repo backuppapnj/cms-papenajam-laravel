@@ -8,13 +8,13 @@
 - [x] Task: Profile - Implement Public Views for Visi Misi, Sejarah, and Officers [57d9807]
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Institutional Profile' (Protocol in workflow.md)
 
-## Phase 2: Legal Services (Prosedur & Radius Biaya)
+## Phase 2: Legal Services (Prosedur & Radius Biaya) [checkpoint: 827725c]
 - [x] Task: Services - Create Migrations & Models (Procedure, RadiusFee) [11e7be4]
 - [x] Task: Services - Write Tests for Service Management
 - [x] Task: Services - Implement Admin Management for Procedures (Text & Infografis) [2e61cef]
 - [x] Task: Services - Implement Admin Management for Radius Fees (PDF & Table) [2e61cef]
 - [x] Task: Services - Implement Public Views for Procedures and Radius Fees [2e61cef]
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Legal Services' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 2: Legal Services' (Protocol in workflow.md)
 
 ## Phase 3: Final Integration & Navigation
 - [ ] Task: Integration - Add Links to Header/Footer and Landing Page
