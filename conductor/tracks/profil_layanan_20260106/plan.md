@@ -11,9 +11,9 @@
 ## Phase 2: Legal Services (Prosedur & Radius Biaya)
 - [x] Task: Services - Create Migrations & Models (Procedure, RadiusFee) [11e7be4]
 - [x] Task: Services - Write Tests for Service Management
-- [~] Task: Services - Implement Admin Management for Procedures (Text & Infografis)
-- [ ] Task: Services - Implement Admin Management for Radius Fees (PDF & Table)
-- [ ] Task: Services - Implement Public Views for Procedures and Radius Fees
+- [x] Task: Services - Implement Admin Management for Procedures (Text & Infografis) [2e61cef]
+- [x] Task: Services - Implement Admin Management for Radius Fees (PDF & Table) [2e61cef]
+- [x] Task: Services - Implement Public Views for Procedures and Radius Fees [2e61cef]
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Legal Services' (Protocol in workflow.md)
 
 ## Phase 3: Final Integration & Navigation
