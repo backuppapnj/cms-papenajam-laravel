@@ -9,7 +9,7 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Institutional Profile' (Protocol in workflow.md)
 
 ## Phase 2: Legal Services (Prosedur & Radius Biaya)
-- [~] Task: Services - Create Migrations & Models (Procedure, RadiusFee)
+- [x] Task: Services - Create Migrations & Models (Procedure, RadiusFee) [11e7be4]
 - [ ] Task: Services - Write Tests for Service Management
 - [ ] Task: Services - Implement Admin Management for Procedures (Text & Infografis)
 - [ ] Task: Services - Implement Admin Management for Radius Fees (PDF & Table)
