@@ -7,6 +7,9 @@ use App\Livewire\Admin\Gallery\Index as GalleryIndex;
 use App\Livewire\Admin\News\Create as NewsCreate;
 use App\Livewire\Admin\News\Edit as NewsEdit;
 use App\Livewire\Admin\Profile\ProfileForm;
+use App\Livewire\Admin\Officers\Index as OfficerIndex;
+use App\Livewire\Admin\Officers\Create as OfficerCreate;
+use App\Livewire\Admin\Officers\Edit as OfficerEdit;
 use App\Livewire\Admin\Gallery\Index as GalleryIndex;
 use App\Livewire\Admin\News\Index as NewsIndex;
 use App\Livewire\Public\Documents\Index as PublicDocumentsIndex;
@@ -61,6 +64,10 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('profile/visi-misi', ProfileForm::class)->name('profile.visi-misi')->defaults('key', 'visi_misi');
         Route::get('profile/sejarah', ProfileForm::class)->name('profile.sejarah')->defaults('key', 'sejarah');
+
+        Route::get('officers', OfficerIndex::class)->name('officers.index');
+        Route::get('officers/create', OfficerCreate::class)->name('officers.create');
+        Route::get('officers/{officer}/edit', OfficerEdit::class)->name('officers.edit');
 
         Route::get('gallery', GalleryIndex::class)->name('gallery.index');
         Route::get('gallery/create', GalleryCreate::class)->name('gallery.create');
