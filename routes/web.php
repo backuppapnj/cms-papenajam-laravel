@@ -1,22 +1,21 @@
 <?php
 
+use App\Livewire\Admin\Documents\Create as DocumentCreate;
+use App\Livewire\Admin\Documents\Index as DocumentIndex;
+use App\Livewire\Admin\Gallery\Create as GalleryCreate;
+use App\Livewire\Admin\Gallery\Index as GalleryIndex;
+use App\Livewire\Admin\News\Create as NewsCreate;
+use App\Livewire\Admin\News\Edit as NewsEdit;
+use App\Livewire\Admin\News\Index as NewsIndex;
+use App\Livewire\Public\Home;
+use App\Livewire\Settings\Appearance;
+use App\Livewire\Settings\Password;
+use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
 use Livewire\Volt\Volt;
-use App\Livewire\Settings\Profile;
-use App\Livewire\Settings\Password;
-use App\Livewire\Settings\Appearance;
-use App\Livewire\Admin\News\Index as NewsIndex;
-use App\Livewire\Admin\News\Create as NewsCreate;
-use App\Livewire\Admin\News\Edit as NewsEdit;
-use App\Livewire\Admin\Gallery\Index as GalleryIndex;
-use App\Livewire\Admin\Gallery\Create as GalleryCreate;
-use App\Livewire\Admin\Documents\Index as DocumentIndex;
-use App\Livewire\Admin\Documents\Create as DocumentCreate;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', Home::class)->name('home');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

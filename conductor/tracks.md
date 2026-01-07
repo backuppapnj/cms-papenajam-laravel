@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-## [~] Track: Refactor to Class-Based Livewire (MVC)
-*Link: [./conductor/tracks/refactor_mvc_20260106/](./conductor/tracks/refactor_mvc_20260106/)*
+## [~] Track: Implementasi Halaman Publik (Landing Page, Berita, Galeri, Dokumen)
+*Link: [./conductor/tracks/public_pages_20260106/](./conductor/tracks/public_pages_20260106/)*
