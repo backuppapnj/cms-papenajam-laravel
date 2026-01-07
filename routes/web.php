@@ -8,6 +8,8 @@ use App\Livewire\Admin\News\Create as NewsCreate;
 use App\Livewire\Admin\News\Edit as NewsEdit;
 use App\Livewire\Admin\News\Index as NewsIndex;
 use App\Livewire\Public\Home;
+use App\Livewire\Public\News\Index as PublicNewsIndex;
+use App\Livewire\Public\News\Show as PublicNewsShow;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -16,6 +18,12 @@ use Laravel\Fortify\Features;
 use Livewire\Volt\Volt;
 
 Route::get('/', Home::class)->name('home');
+
+// Public News Routes
+Route::name('public.')->group(function () {
+    Route::get('/news', PublicNewsIndex::class)->name('news.index');
+    Route::get('/news/{slug}', PublicNewsShow::class)->name('news.show');
+});
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

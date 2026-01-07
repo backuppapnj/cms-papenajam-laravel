@@ -8,11 +8,11 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Setup & Landing Page' (Protocol in workflow.md)
 
 ## Phase 2: News & Archive Pages
-- [ ] Task: Public News - Write Tests for Archive & Detail Views
-- [ ] Task: Public News - Implement News Archive with Grid & Sidebar
-- [ ] Task: Public News - Implement Category Filtering & Local Search
-- [ ] Task: Public News - Implement News Detail Page (Share, Print, Navigation)
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: News & Archive Pages' (Protocol in workflow.md)
+- [x] Task: Public News - Write Tests for Archive & Detail Views
+- [x] Task: Public News - Implement News Archive with Grid & Sidebar
+- [x] Task: Public News - Implement Category Filtering & Local Search
+- [x] Task: Public News - Implement News Detail Page (Share, Print, Navigation)
+- [x] Task: Conductor - User Manual Verification 'Phase 2: News & Archive Pages' (Protocol in workflow.md)
 
 ## Phase 3: Gallery & Document Center
 - [ ] Task: Public Gallery - Write Tests for Gallery Features
