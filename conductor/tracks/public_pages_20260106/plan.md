@@ -7,7 +7,7 @@
 - [x] Task: Public - Implement Latest News Section on Landing Page
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Setup & Landing Page' (Protocol in workflow.md)
 
-## Phase 2: News & Archive Pages
+## Phase 2: News & Archive Pages [checkpoint: 8c4453a]
 - [x] Task: Public News - Write Tests for Archive & Detail Views
 - [x] Task: Public News - Implement News Archive with Grid & Sidebar
 - [x] Task: Public News - Implement Category Filtering & Local Search
