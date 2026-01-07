@@ -10,7 +10,11 @@ use App\Livewire\Admin\News\Index as NewsIndex;
 use App\Livewire\Admin\Officers\Create as OfficerCreate;
 use App\Livewire\Admin\Officers\Edit as OfficerEdit;
 use App\Livewire\Admin\Officers\Index as OfficerIndex;
+use App\Livewire\Admin\Procedures\Create as ProcedureCreate;
+use App\Livewire\Admin\Procedures\Edit as ProcedureEdit;
+use App\Livewire\Admin\Procedures\Index as ProcedureIndex;
 use App\Livewire\Admin\Profile\ProfileForm;
+use App\Livewire\Admin\RadiusFees\Index as RadiusFeeIndex;
 use App\Livewire\Public\Documents\Index as PublicDocumentsIndex;
 use App\Livewire\Public\Gallery\Index as PublicGalleryIndex;
 use App\Livewire\Public\Home;
@@ -19,6 +23,8 @@ use App\Livewire\Public\News\Show as PublicNewsShow;
 use App\Livewire\Public\Profile\Sejarah as PublicSejarah;
 use App\Livewire\Public\Profile\Structure as PublicStructure;
 use App\Livewire\Public\Profile\VisiMisi as PublicVisiMisi;
+use App\Livewire\Public\Services\Procedure as PublicProcedure;
+use App\Livewire\Public\Services\RadiusFees as PublicRadiusFees;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -39,6 +45,11 @@ Route::name('public.')->group(function () {
         Route::get('/visi-misi', PublicVisiMisi::class)->name('visi-misi');
         Route::get('/sejarah', PublicSejarah::class)->name('sejarah');
         Route::get('/struktur-organisasi', PublicStructure::class)->name('structure');
+    });
+
+    Route::prefix('services')->name('services.')->group(function () {
+        Route::get('/procedures/{slug}', PublicProcedure::class)->name('procedure');
+        Route::get('/radius-fees', PublicRadiusFees::class)->name('radius-fees');
     });
 });
 
@@ -76,6 +87,12 @@ Route::middleware(['auth'])->group(function () {
         Route::get('officers', OfficerIndex::class)->name('officers.index');
         Route::get('officers/create', OfficerCreate::class)->name('officers.create');
         Route::get('officers/{officer}/edit', OfficerEdit::class)->name('officers.edit');
+
+        Route::get('procedures', ProcedureIndex::class)->name('procedures.index');
+        Route::get('procedures/create', ProcedureCreate::class)->name('procedures.create');
+        Route::get('procedures/{procedure}/edit', ProcedureEdit::class)->name('procedures.edit');
+
+        Route::get('radius-fees', RadiusFeeIndex::class)->name('radius-fees.index');
 
         Route::get('gallery', GalleryIndex::class)->name('gallery.index');
         Route::get('gallery/create', GalleryCreate::class)->name('gallery.create');
