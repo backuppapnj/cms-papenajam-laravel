@@ -1,7 +1,7 @@
 # Track Plan: Implementasi Modul Profil & Layanan
 
 ## Phase 1: Institutional Profile (Visi, Sejarah, Struktur)
-- [~] Task: Profile - Create Migrations & Models (ProfileContent, Officer)
+- [x] Task: Profile - Create Migrations & Models (ProfileContent, Officer) [381356c]
 - [ ] Task: Profile - Write Tests for Management Features
 - [ ] Task: Profile - Implement Admin Form for Visi Misi & Sejarah
 - [ ] Task: Profile - Implement Admin CRUD for Officers (Struktur Organisasi)
